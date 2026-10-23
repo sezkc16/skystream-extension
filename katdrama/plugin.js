@@ -5,12 +5,16 @@
   const cache = new Map();
 
   async function fetchPage(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-    return await response.text();
-  }
+  const names = Object.getOwnPropertyNames(globalThis)
+    .filter(name =>
+      /http|fetch|request|network|client|app/i.test(name)
+    );
+
+  throw new Error(
+    "Available network APIs: " +
+    (names.join(", ") || "none found")
+  );
+}
 
   function decodeHtml(value) {
     return String(value || "")
