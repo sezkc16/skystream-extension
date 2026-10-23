@@ -1,1 +1,10 @@
 
+{
+  "packageName": "com.skystream.katdrama",
+  "name": "KatDrama",
+  "version": "1.0.0",
+  "description": "KatDrama streaming website provider",
+  "baseUrl": "https://new.katdrama.my",
+  "language": "en"
+}
+
