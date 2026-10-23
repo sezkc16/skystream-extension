@@ -3,7 +3,7 @@
 {
   "packageName": "com.skystream.katdrama",
   "name": "KatDrama",
-  "version": 1,
+  "version": 2,
   "description": "KatDrama streaming website provider",
   "baseUrl": "https://new.katdrama.my",
   "authors": ["sezkc16"],
