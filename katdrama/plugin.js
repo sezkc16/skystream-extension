@@ -88,14 +88,17 @@ async function load(url, cb) {
     type: "series",
     year: info.year,
     description: info.title,
-    episodes: [
-      new Episode({
-        name: "Episode 1 (Test)",
-        url: url + "#episode-1",
-        season: 1,
-        episode: 1
-      })
-    ]
+    
+episodes: Array.from(
+  { length: slug === "make-me-tingle-2026-s01-hindi" ? 6 : 1 },
+  (_, i) => new Episode({
+    name: `Episode ${i + 1} (Test)`,
+    url: `${url}#episode-${i + 1}`,
+    season: 1,
+    episode: i + 1
+  })
+)
+
   });
 
   cb({
