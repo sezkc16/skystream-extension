@@ -5,14 +5,27 @@
   const cache = new Map();
 
   async function fetchPage(url) {
-  const names = Object.getOwnPropertyNames(globalThis)
-    .filter(name =>
-      /http|fetch|request|network|client|app/i.test(name)
-    );
+  const response = await http_get(url);
+
+  if (typeof response === "string") {
+    return response;
+  }
+
+  if (response && typeof response.body === "string") {
+    return response.body;
+  }
+
+  if (response && typeof response.data === "string") {
+    return response.data;
+  }
+
+  if (response && typeof response.text === "string") {
+    return response.text;
+  }
 
   throw new Error(
-    "Available network APIs: " +
-    (names.join(", ") || "none found")
+    "Unknown http_get response: " +
+    JSON.stringify(response).slice(0, 200)
   );
 }
 
