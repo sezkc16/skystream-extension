@@ -184,8 +184,16 @@
   }
 
   async function getCatalog() {
-  const html = await fetchPage(baseUrl + "/");
-  const items = extractCatalog(html);
+  const text = await fetchPage(baseUrl + "/__data.json");
+  const json = JSON.parse(text);
+  const items = findItems(json) || [];
+
+  if (!items.length) {
+    throw new Error("No titles found in __data.json");
+  }
+
+  return items;
+}
 
   if (items.length === 0) {
     throw new Error(
