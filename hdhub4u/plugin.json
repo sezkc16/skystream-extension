@@ -1,8 +1,13 @@
 
+
 {
-  "id": "com.skystream.hdhub4u",
+  "packageName": "com.skystream.hdhub4u",
   "name": "HDHub4u",
-  "version": "1.0.0",
+  "version": 1,
   "description": "HDHub4u SkyStream extension",
-  "author": "sezkc16"
+  "baseUrl": "https://new1.hdhub4u.limo",
+  "authors": ["sezkc16"],
+  "languages": ["hi", "en"],
+  "categories": ["Movies", "TvSeries"]
 }
+
