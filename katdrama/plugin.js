@@ -7,7 +7,9 @@ async function getHome(cb) {
     const drama = new MultimediaItem({
         title: "Make Me Tingle (2026)",
         url: `${manifest.baseUrl}/make-me-tingle-2026-s01-hindi/`,
-        posterUrl: "",
+        
+posterUrl: "https://m.media-amazon.com/images/M/MV5BOTc0MDcwNDYtYWQwOS00YmY0LWIxOTMtZWMxYjQwOTJmNDQ1XkEyXkFqcGc@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+
         type: "series",
         year: 2026
     });
