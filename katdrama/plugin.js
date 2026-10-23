@@ -56,14 +56,13 @@ async function load(url, cb) {
   });
 }
 
-  cb({
+   cb({
     success: true,
     data: drama
   });
 }
 
-
-    async function loadStreams(url, cb) {
+async function loadStreams(url, cb) {
         cb({
             success: true,
             data: []
