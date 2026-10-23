@@ -34,5 +34,34 @@
       "TvSeries"
     ],
     "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/com.skystream.katdrama.sky"
+  },
+  {
+    "packageName": "dev.akash.stars.moviesdrive",
+    "name": "Movies Drive",
+    "version": 8,
+    "baseUrl": "https://new2.moviesdrives.my",
+    "domains": [
+      {
+        "name": "new2.moviesdrives.my",
+        "url": "https://new2.moviesdrives.my"
+      },
+      {
+        "name": "moviesdrive.forum",
+        "url": "https://moviesdrive.forum"
+      }
+    ],
+    "description": "Premium VOD Scraper with metadata sync",
+    "authors": [
+      "Akash"
+    ],
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "categories": [
+      "Movie",
+      "TvSeries"
+    ],
+    "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/dev.akash.stars.moviesdrive.sky"
   }
 ]
