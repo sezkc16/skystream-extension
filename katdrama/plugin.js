@@ -184,9 +184,20 @@
   }
 
   async function getCatalog() {
-    const html = await fetchPage(baseUrl + "/");
-    return extractCatalog(html);
+  const html = await fetchPage(baseUrl + "/");
+  const items = extractCatalog(html);
+
+  if (items.length === 0) {
+    throw new Error(
+      "HTML length: " + html.length +
+      " | Has items: " + html.includes('"items"') +
+      " | Preview: " +
+      html.slice(0, 100).replace(/\s+/g, " ")
+    );
   }
+
+  return items;
+}
 
   async function getHome(cb) {
   try {
