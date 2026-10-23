@@ -56,20 +56,20 @@ async function load(url, cb) {
   });
 }
 
-async function loadStreams(url, cb) {
 
-   cb({
+async function loadStreams(url, cb) {
+  const stream = new StreamResult({
+    url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    source: "Test Video",
+    quality: "720p"
+  });
+
+  cb({
     success: true,
-    data: drama
+    data: [stream]
   });
 }
 
-async function loadStreams(url, cb) {
-        cb({
-            success: true,
-            data: []
-        });
-    }
 
     globalThis.getHome = getHome;
     globalThis.search = search;
