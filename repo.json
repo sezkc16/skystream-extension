@@ -1,0 +1,10 @@
+
+{
+  "name": "SkyStream Extension",
+  "packageName": "com.skystream.katdrama",
+  "description": "My SkyStream plugins repository",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/plugins.json"
+  ]
+}
