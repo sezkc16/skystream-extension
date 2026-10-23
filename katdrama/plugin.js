@@ -111,7 +111,9 @@ episodes: Array.from(
 
 async function loadStreams(url, cb) {
   const stream = new StreamResult({
-    url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    url: url.includes("#episode-2")
+  ? "https://test-streams.mux.dev/test_001/stream.m3u8"
+  : "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
     source: "Test Video",
     quality: "720p"
   });
