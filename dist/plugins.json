@@ -2,10 +2,18 @@
   {
     "packageName": "com.skystream.katdrama",
     "name": "KatDrama",
-    "version": "1.0.0",
+    "version": 1,
     "description": "KatDrama streaming website provider",
     "baseUrl": "https://new.katdrama.my",
-    "language": "en",
+    "authors": [
+      "sezkc16"
+    ],
+    "languages": [
+      "en"
+    ],
+    "categories": [
+      "TvSeries"
+    ],
     "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/com.skystream.katdrama.sky"
   }
 ]
