@@ -1,5 +1,13 @@
 [
   {
+    "id": "com.skystream.hdhub4u",
+    "name": "HDHub4u",
+    "version": "1.0.0",
+    "description": "HDHub4u SkyStream extension",
+    "author": "sezkc16",
+    "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/com.skystream.hdhub4u.sky"
+  },
+  {
     "packageName": "com.skystream.katdrama",
     "name": "KatDrama",
     "version": 4,
