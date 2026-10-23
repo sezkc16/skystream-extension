@@ -185,16 +185,29 @@
 
   async function getCatalog() {
   const text = await fetchPage(baseUrl + "/__data.json");
-  const json = JSON.parse(text);
+
+  let json;
+
+  try {
+    json = JSON.parse(text);
+  } catch (error) {
+    throw new Error(
+      "Invalid JSON | Length: " + text.length +
+      " | Preview: " +
+      text.slice(0, 100).replace(/\s+/g, " ")
+    );
+  }
+
   const items = findItems(json) || [];
 
-  if (!items.length) {
-    throw new Error("No titles found in __data.json");
+  if (items.length === 0) {
+    throw new Error(
+      "JSON loaded, but no titles found"
+    );
   }
 
   return items;
 }
-
 async function getHome(cb) {
   try {
     const items = await getCatalog();
