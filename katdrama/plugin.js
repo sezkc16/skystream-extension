@@ -195,19 +195,7 @@
   return items;
 }
 
-  if (items.length === 0) {
-    throw new Error(
-      "HTML length: " + html.length +
-      " | Has items: " + html.includes('"items"') +
-      " | Preview: " +
-      html.slice(0, 100).replace(/\s+/g, " ")
-    );
-  }
-
-  return items;
-}
-
-  async function getHome(cb) {
+async function getHome(cb) {
   try {
     const items = await getCatalog();
 
