@@ -6,6 +6,6 @@
     "description": "KatDrama streaming website provider",
     "baseUrl": "https://new.katdrama.my",
     "language": "en",
-    "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/repo.json/dist/com.skystream.katdrama.sky"
+    "url": "https://raw.githubusercontent.com/sezkc16/skystream-extension/main/dist/com.skystream.katdrama.sky"
   }
 ]
