@@ -172,24 +172,34 @@
   }
 
   async function getHome(cb) {
-    try {
-      const items = await getCatalog();
+  try {
+    const items = await getCatalog();
 
-      cb({
-        success: true,
-        data: {
-          "Latest Dramas & Anime": items.map(toMedia)
-        }
-      });
-    } catch (error) {
-      console.error("KatDrama home:", error);
-
-      cb({
-        success: false,
-        data: {}
-      });
+    if (!items || items.length === 0) {
+      throw new Error("Website catalog returned zero titles");
     }
+
+    cb({
+      success: true,
+      data: {
+        "Latest Dramas & Anime": items.map(toMedia)
+      }
+    });
+  } catch (error) {
+    cb({
+      success: true,
+      data: {
+        "KatDrama Diagnostics": [
+          new MultimediaItem({
+            title: "ERROR: " + String(error.message || error),
+            url: `${baseUrl}/make-me-tingle-2026-s01-hindi/`,
+            type: "series"
+          })
+        ]
+      }
+    });
   }
+}
 
   async function search(query, cb) {
     try {
